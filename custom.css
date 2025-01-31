@@ -1,0 +1,60 @@
+body {
+    background-color: #ebffee;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+#containerHead {
+    text-decoration: underline;
+    font-size: 5rem;
+}
+
+#listContainer {
+    list-style: none;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    width: 18rem;
+}
+
+#newItem {
+    width: 20rem;
+    height: 2rem;
+}
+
+#btnAddItem {
+    margin-left: 0.4rem;
+    width: 5rem;
+    height: 2.4rem;
+}
+
+li input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+li button {
+    width: 4rem;
+    height: 2rem;
+    margin-left: 2rem;
+}
+
+li {
+    margin-top: 2rem;
+}
+
+.msg {
+    display: none;
+}
+
+#msgCheck {
+    margin: 0;
+}
