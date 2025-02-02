@@ -7,9 +7,16 @@ body {
 
 #container {
     display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+#mainContent {
+    box-shadow: 0px 0px 5px 2px gray;
+    width: 40rem;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
 }
 
 #containerHead {
@@ -17,22 +24,91 @@ body {
     font-size: 5rem;
 }
 
-#listContainer {
-    list-style: none;
-    margin-top: 3rem;
-    font-size: 2.5rem;
-    width: 18rem;
-}
-
 #newItem {
-    width: 20rem;
-    height: 2rem;
+    width: 25rem;
+    height: 3rem;
+    font-size: larger;
+    padding: 0.5rem 1rem;
+    background-color: #fefae0;
+    border-radius: 10px;
+    cursor: text;
 }
 
 #btnAddItem {
-    margin-left: 0.4rem;
+    margin-left: 0.5rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    border: 2px solid black;
+    background-color: #84a98c;
+    color: #edf2f4;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btnAddItem:hover {
+    color: white;
+}
+
+#btnSaveItems,
+#btnClearAllItems,
+#btnRefreshItems {
+    margin-top: 2rem;
     width: 5rem;
-    height: 2.4rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffb4a2;
+    color: #14213d;
+}
+
+#btnSaveItems {
+    background-color: #4f772d;
+    color: #ebffee;
+}
+
+#btnClearAllItems {
+    background-color: #f07167;
+    color: #ebffee;
+}
+
+#btnRefreshItems {
+    background-color: #98c1d9;
+    color: #132a13;
+}
+
+#btnSaveItems,
+#btnRefreshItems {
+    margin-right: 1.5rem;
+}
+
+#btnDelete {
+    width: 5rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ff4d6d;
+    color: #edf6f9;
+    transform: translate(0px, -7px);
+}
+
+#btnDelete,
+#btnSaveItems,
+#btnClearAllItems,
+#btnRefreshItems:hover {
+    cursor: pointer;
+}
+
+#listContainer {
+    list-style: none;
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    width: 20rem;
 }
 
 li input {
@@ -48,7 +124,7 @@ li button {
 }
 
 li {
-    margin-top: 2rem;
+    margin: 2rem 0rem;
 }
 
 .msg {
@@ -57,4 +133,5 @@ li {
 
 #msgCheck {
     margin: 0;
+    margin-bottom: 2.2rem;
 }

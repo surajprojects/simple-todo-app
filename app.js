@@ -1,7 +1,10 @@
-const data = ["apple", "ball"];
+let data = JSON.parse(localStorage.getItem("data")) || [];
 
 const newItem = document.querySelector("#newItem");
 const btnAddItem = document.querySelector("#btnAddItem");
+const btnRefreshItems = document.querySelector("#btnRefreshItems");
+const btnSaveItems = document.querySelector("#btnSaveItems");
+const btnClearAllItems = document.querySelector("#btnClearAllItems");
 const listContainer = document.querySelector("#listContainer");
 const msgCheck = document.querySelector("#msgCheck");
 
@@ -27,7 +30,6 @@ listContainer.addEventListener("click", function (e) {
     }
     else if (e.target.nodeName === "INPUT") {
         if (e.target.checked) {
-            const itemChecked = parseInt(e.target.id);
             const itemLi = e.target.closest("li").id;
             const itemLiCheck = document.querySelector(`#${itemLi}`);
             itemLiCheck.classList.add("item");
@@ -35,7 +37,6 @@ listContainer.addEventListener("click", function (e) {
             itemLiCheck.style.color = "#808080";
         }
         else {
-            const itemChecked = parseInt(e.target.id);
             const itemLi = e.target.closest("li").id;
             const itemLiCheck = document.querySelector(`#${itemLi}`);
             itemLiCheck.classList.remove("item");
@@ -50,6 +51,7 @@ function refreshList() {
         msgCheck.classList.remove("msg");
     }
     else {
+        listContainer.innerHTML = "";
         for (let i = 0; i < data.length; i++) {
             const newLi = document.createElement("li");
             const itemCheckbox = document.createElement("input");
@@ -58,6 +60,7 @@ function refreshList() {
             itemCheckbox.type = "checkbox";
             itemCheckbox.id = i;
             btnDelete.append("Delete");
+            btnDelete.id = "btnDelete";
             btnDelete.className = `btnDelItem${i}`
             newLi.append(itemCheckbox);
             newLi.append(data[i]);
@@ -68,6 +71,33 @@ function refreshList() {
 };
 refreshList();
 
+btnRefreshItems.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (JSON.parse(localStorage.getItem("data"))) {
+        data = JSON.parse(localStorage.getItem("data"));
+        refreshList();
+    }
+    else {
+        data = [];
+        listContainer.innerHTML = "";
+        refreshList();
+    }
+
+});
+
+btnSaveItems.addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.setItem("data", JSON.stringify(data));
+});
+
+btnClearAllItems.addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem("data");
+    data = [];
+    listContainer.innerHTML = "";
+    refreshList();
+});
+
 function addItem() {
     const newLi = document.createElement("li");
     const itemCheckbox = document.createElement("input");
@@ -76,15 +106,10 @@ function addItem() {
     itemCheckbox.type = "checkbox";
     itemCheckbox.id = data.length - 1;
     btnDelete.append("Delete");
+    btnDelete.id = "btnDelete";
     btnDelete.className = `btnDelItem${data.length - 1}`
     newLi.append(itemCheckbox);
     newLi.append(data[data.length - 1]);
     newLi.append(btnDelete);
     listContainer.append(newLi);
 };
-
-
-
-
-
-

@@ -10,15 +10,22 @@
 
 <body>
     <main id="container">
-        <h1 id="containerHead">To-do List</h1>
-        <form action="#">
-            <input type="text" name="newItem" id="newItem">
-            <button id="btnAddItem">Add</button>
-        </form>
-        <ul id="listContainer">
+        <div id="mainContent">
+            <h1 id="containerHead">To-do List</h1>
+            <form action="#">
+                <input type="text" name="newItem" id="newItem">
+                <button id="btnAddItem">+</button>
+            </form>
+            <div>
+                <button id="btnRefreshItems">Refresh</button>
+                <button id="btnSaveItems">Save</button>
+                <button id="btnClearAllItems">Clear All</button>
+            </div>
+            <ul id="listContainer">
 
-        </ul>
-        <p id="msgCheck" class="msg">No items in the list yet!!!</p>
+            </ul>
+            <p id="msgCheck" class="msg">No items in the list yet!!!</p>
+        </div>
     </main>
 
     <script src="app.js"></script>
