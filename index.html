@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <main id="rootWrapper">
+        <!-- Title -->
+        <h1 id="todoAppTitle">Todo List</h1>
+        <!-- Controls Wrapper Container -->
+        <div id="controlsWrapper">
+            <!-- Add Todo Container -->
+            <form id="addTodoContainer">
+                <!-- New Todo Input -->
+                <input type="text" id="newTodoInput" name="newTodoInput" placeholder="Get pineapples">
+                <!-- Add New Todo -->
+                <button type="submit" id="addBtn">
+                    <svg id="plusIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-plus-circle">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="16" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                    </svg>
+                    Add Todo
+                </button>
+            </form>
+            <p id="emptyTodoInput" class="hideElement">Empty todo input!</p>
+            <!-- Order and Search Todo Wrapper -->
+            <div id="orderSearchTodoWrapper">
+                <!-- Order By Container -->
+                <div id="orderByContainer">
+                    <label for="orderBy">Order by</label>
+                    <select name="orderBy" id="orderBy">
+                        <option value="" selected disabled>Select</option>
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="lastModified">Last Modified</option>
+                    </select>
+                </div>
+                <!-- Search Todo Container -->
+                <form id="searchTodoContainer">
+                    <input type="text" id="searchTodoInput" name="searchTodoInput" placeholder="Search todo list">
+                    <button type="submit" id="searchBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-search">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <!-- Filter Todo -->
+            <ul id="filterTodo">
+                <li id="filterValueAll" class="filterTodoItem filterTodoItemSelect">All</li>
+                <li id="filterValueDone" class="filterTodoItem">Done</li>
+                <li id="filterValuePending" class="filterTodoItem">Pending</li>
+            </ul>
+        </div>
+        <!-- Messages Wrapper -->
+        <div>
+            <p id="searchResultTitle" class="hideElement">Results</p>
+            <p id="noSearchFound" class="hideElement">No todo found!!!</p>
+            <p id="emptySearch" class="hideElement">Search field is empty!</p>
+        </div>
+        <!-- All Todos Container -->
+        <div id="allTodoItemContainer"></div>
+    </main>
+
+    <script type="module" src="icons.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
