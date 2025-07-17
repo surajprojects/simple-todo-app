@@ -29,6 +29,10 @@ A responsive To-Do List app built using **HTML**, **CSS**, and **JavaScript**. I
 
 This web app is deployed using [Vercel](https://vercel.com/) by Tiger. You can access the live version here: [Todo List App](https://simple-todo-app-orpin-omega.vercel.app/)
 
+## ScreenShots
+
+![Screenshot](todo-list-app-screenshot.png)
+
 ## Getting Started
 
 To run the app locally:
