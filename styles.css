@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: "Jost", Arial, Helvetica, sans-serif;
     background-color: #f6f4ff;
@@ -5,6 +6,7 @@ body {
     margin: 0;
 }
 
+/* Layout wrapper */
 #rootWrapper {
     padding: 5rem 0;
     display: flex;
@@ -13,16 +15,19 @@ body {
     align-items: center;
 }
 
+/* Title */
 #todoAppTitle {
     font-weight: 500;
     font-size: 4rem;
     text-decoration: underline;
 }
 
+/* Controls wrapper */
 #controlsWrapper {
     margin: 1rem;
 }
 
+/* Add todo wrapper */
 #addTodoContainer {
     display: flex;
     justify-content: center;
@@ -30,6 +35,7 @@ body {
     margin-bottom: 1.2rem;
 }
 
+/* Order search todo wrapper */
 #orderSearchTodoWrapper {
     padding: 1rem;
     display: flex;
@@ -59,6 +65,7 @@ body {
     box-shadow: 0 0 6px 0px #c9c9c9;
 }
 
+/* Add todo button */
 #addBtn {
     display: flex;
     justify-content: center;
@@ -72,17 +79,18 @@ body {
     outline: none;
     box-shadow: 2px 2px 6px 1px #c9c9c9;
     border: 1px solid #5249e4;
+
+    &:hover {
+        box-shadow: 2px 2px 8px 4px #c9c9c9;
+        cursor: pointer;
+    }
 }
 
 #plusIcon {
     margin-right: 0.4rem;
 }
 
-#addBtn:hover {
-    box-shadow: 2px 2px 8px 4px #c9c9c9;
-    cursor: pointer;
-}
-
+/* Search todo wrapper */
 #searchTodoContainer {
     display: flex;
     align-items: center;
@@ -106,13 +114,14 @@ body {
     border: 1px solid #c6c6c6;
     border-left: 0;
     outline: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #efebff;
+    }
 }
 
-#searchBtn:hover {
-    cursor: pointer;
-    background-color: #efebff;
-}
-
+/* Result title */
 #searchResultTitle {
     font-size: 1.6rem;
     font-weight: 500;
@@ -122,6 +131,7 @@ body {
     font-style: italic;
 }
 
+/* Message's display section */
 #noSearchFound,
 #emptySearch,
 #emptyTodoInput {
@@ -135,6 +145,7 @@ body {
     margin-bottom: 1.2rem;
 }
 
+/* Filter and sorting section */
 #todoFilterTitle,
 #orderByTitle {
     font-size: 1.1rem;
@@ -182,6 +193,7 @@ body {
     background-color: #e6e5fa;
 }
 
+/* Todo list item section */
 .todoListItem {
     background-color: #fff;
     display: flex;
@@ -251,10 +263,6 @@ body {
     margin-right: 0.8rem;
 }
 
-.hideElement {
-    display: none;
-}
-
 #editBtn {
     color: #761ec9;
 }
@@ -271,6 +279,14 @@ body {
     color: #72b01d;
 }
 
+.hideElement {
+    display: none !important;
+}
+
+/* Responsive Design */
+/* Adjust sizes for tablets and smaller screens */
+
+/* Mobile phone layout */
 @media (max-width: 580px) {
     #todoAppTitle {
         font-size: 2.8rem;
@@ -348,6 +364,7 @@ body {
     }
 }
 
+/* Ultra small screen fix */
 @media (max-width: 320px) {
     #todoAppTitle {
         font-size: 2.2rem;
