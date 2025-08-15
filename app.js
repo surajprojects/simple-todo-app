@@ -221,7 +221,6 @@ function toggleFilterOptions(todoListData, selectedFilter = "filterValueAll", is
 function searchTodoListAppData() {
     // add class to hide unneccessary message
     emptySearch.classList.add("hideElement");
-    emptySearch.classList.add("hideElement");
     noSearchFound.classList.add("hideElement");
     emptyTodoInput.classList.add("hideElement");
     searchResultTitle.classList.add("hideElement");
