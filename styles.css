@@ -4,6 +4,7 @@ body {
     background-color: #f6f4ff;
     padding: 0;
     margin: 0;
+    user-select: none;
 }
 
 /* Layout wrapper */
@@ -185,8 +186,9 @@ body {
 }
 
 .filterTodoItem:hover {
-    background-color: #e6e5fa;
     cursor: pointer;
+    background-color: #e6e5fa;
+    transition: background-color 180ms ease-in-out;
 }
 
 .filterTodoItemSelect {
@@ -203,16 +205,21 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 5px 2px #c9c9c9;
     width: 28rem;
+
+    &:hover {
+        box-shadow: 0 0 5px 4px #c9c9c9;
+        transition: box-shadow 140ms ease-in-out;
+    }
 }
 
 .todoCheckBox {
     margin: 1.2rem;
     width: 1.2rem;
     height: 1.2rem;
-}
 
-.todoCheckBox:hover {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .editTodoItem {
